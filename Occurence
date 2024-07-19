@@ -1,0 +1,28 @@
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+       Scanner s=new Scanner(System.in);
+       String s1=s.nextLine();
+       int n=s1.length();
+       String s2="";
+       for(int i=0;i<n;i++)
+       {
+           int c=0;
+            if(!s2.contains(String.valueOf(s1.charAt(i))))
+             {
+           for(int j=0;j<n;j++)
+           {
+               if(s1.charAt(i)==s1.charAt(j))
+               {
+                   c++;
+               }
+           }
+            s2=s2+s1.charAt(i);
+              System.out.print(s1.charAt(i)+" "+c+" ");
+             }
+       }
+    }
+}
+
